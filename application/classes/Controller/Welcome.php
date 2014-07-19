@@ -7,4 +7,9 @@ class Controller_Welcome extends Controller {
 		$this->response->body('hello, world!');
 	}
 
+	public function action_echo($value='')
+	{
+		$message = $this->request->param('id');
+		$this->response->body("You said: " . $message);
+	}
 } // End Welcome
